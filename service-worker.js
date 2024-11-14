@@ -3,11 +3,12 @@ self.addEventListener('install', (event) => {
     caches.open('v1').then((cache) => {
       return cache.addAll([
         '/',
-        './src/index.html',
-        './src/css/style.css',
-        './src/app.js',
-        './src/images/icon-128.png',
-        './src/images/icon-512.png'
+        '/index.html',
+        '/src/css/style.css',
+        '/src/app.js',
+        '/src/manifest.json',
+        '/src/images/icon-128.png',
+        '/src/images/icon-512.png'
       ]).catch((error) => {
         console.error('Error al agregar recursos al caché:', error);
       });
