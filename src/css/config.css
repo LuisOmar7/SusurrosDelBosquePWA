@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-out { @apply relative inline-block w-full h-auto; } .fade-out::after { content: ''; @apply absolute bottom-0 left-0 w-full; height: 50%; /* Ajusta esta altura según tus necesidades */ background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%); pointer-events: none; /* Permite la interacción con la imagen */ } img { @apply block w-full}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Susurros del bosque</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="manifest" href="../manifest.json" />
+  </head>
+
+  <body class="bg-black font-principal">
+    <div class="relative h-full w-full">
+      <header
+        class="flex justify-center items-center py-5 w-full mx-auto sticky top-0 z-10 px-5 bg-opacity-5 backdrop-blur-lg"
+      >
+        <nav
+          class="text-red-600 flex flex-row gap-x-3 opacity-80 md:gap-x-10 w-full justify-center"
+        >
+          <a href="#top">Inicio</a>
+          <a href="#historia">Historia</a>
+          <a href="#personajes">Personajes</a>
+          <a href="#mecanicas">Mecanicas</a>
+        </nav>
+      </header>
+
+      <!-- Banner Home -->
+
+      <div class="bg-cover bg-center fade-out flex items-center justify-center">
+        <img 
+          src="./images/portada.jpg" 
+          alt="Descripción de la imagen" 
+          class="w-full h-auto lg:h-[450px]"
+        />
+      </div>
+    
+
+      <!-- Contenido Principal HOME-->
+      <div class="flex flex-col items-center">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 w-full">
+          <!-- Your content -->
+          <div class="mt-5 lg:mt-16">
+            <p class="text-lg text-pretty text-slate-100">
+              <span class="bg-gray-200 text-gray-900 px-2 py-1 rounded"
+                >Simian Estudio</span
+              >
+              es el estudio independiente con sede en México detrás de la
+              franquicia de terror inmersiva Susurros del bosque, una serie que ha
+              aterrorizado a jugadores en todo el mundo.
+              Simian Estudio ha hecho su misión crear experiencias inolvidables que
+              dejen a los jugadores con la
+              <span class="bg-gray-200 text-gray-900 px-1 py-1 rounded"
+                >sangre helada</span
+              >.
+            </p>
+
+            <!-- Historia-->
+            <div class="mt-10 lg:mt-32" id="historia">
+              <div class="relative grid grid-cols-12 gap-8">
+                  <figure class="col-span-6 self-start relative overflow-hidden">
+                    <div class="fade-out"> 
+                      <img src="./images/land.jpg" alt="Descripción de la imagen" class="w-auto h-auto"/>
+                    </div>
+                  </figure>
+                  
+                  <div class="col-span-6 flex flex-col items-start justify-center">
+                      <!-- Aquí va el contenido del encabezado -->
+                      <h1 class="text-slate-100 text-2xl lg:text-6xl lg:ml-32">HISTORIA</h1>
+                      <p class="col-span-4 text-slate-500 mt-2 lg:text-3xl lg:ml-32">
+                        UNA EXPERIENCIA ATERRADORA
+                      </p>
+                  </div>
+          
+                  <div class="col-span-10 col-start-2 row-start-2 lg:mt-5 text-pretty text-white">
+                      <p>
+                          "Brenda Sofía, marcada por una infancia de aventura junto a su padre, sufrió
+                          una experiencia traumática cuando, siendo niña, se perdieron juntos en un
+                          bosque inhóspito. Sobrevivieron algunos días en la naturaleza hasta que su
+                          padre, al borde de sus fuerzas, hizo el sacrificio último para asegurarse de
+                          que Brenda pudiera escapar. Aunque sobrevivió físicamente, el evento dejó
+                          una cicatriz indeleble en su mente, una herida de abandono y culpa que la
+                          persigue desde entonces. Como adulta, siendo ahora una investigadora, llegó
+                          a sus manos la noticia de la tragedia de <span class="bg-gray-200 text-gray-900 px-1 py-1 rounded">“Desapariciones”</span> de personas
+                          recientes en el mismo bosque, lo que la lleva a investigar, quizás en busca de
+                          redención, pero en el trayecto sufre un accidente, cayendo en coma.
+                          Dentro de este estado, Brenda se sumerge en un laberinto mental recreado
+                          como un bosque sin fin, donde su mente trata de reconciliar el trauma de su
+                          infancia. Las desapariciones, el bosque y el trauma se mezclan, creando
+                          enemigos y obstáculos que representan sus propios miedos y emociones
+                          reprimidas."
+                      </p>  
+                  </div>
+              </div>
+          </div>
+
+          <!-- Historia el bosque-->
+          <div class="mt-10 lg:mt-32">
+            <div class="relative grid grid-cols-12 gap-8">
+                <div class="col-span-6 flex flex-col items-start justify-center pl-8 lg:pl-0">
+                    <!-- Aquí va el contenido del encabezado -->
+                    <h1 class="text-slate-100 text-2xl lg:text-6xl lg:ml-32">EL BOSQUE</h1>
+                    <p class="col-span-4 text-slate-500 mt-2 lg:text-3xl lg:ml-32">
+                      EN LA OSCURIDAD
+                    </p>
+                </div>
+
+                <figure class="col-span-6 self-start relative overflow-hidden">
+                    <!-- Aquí va el contenido de la imagen o medios -->
+                     <div class="fade-out">
+                        <img src="./images/bosque.jpg" alt="Descripción de la imagen" class="w-auto h-28 lg:h-auto pr-5"/>
+                     </div>
+                </figure>
+
+                <div class="col-span-10 col-start-2 row-start-2 lg:col-span-12 lg:col-start-1 lg:row-start-2 lg:mt-5 text-white">
+                    <p class="text-pretty">
+                        "El bosque es una representación de su mente fragmentada, lleno de
+                        escenarios que simbolizan sus emociones y los recuerdos de su infancia.
+                        Cada área del bosque representa aspectos como la culpa, el miedo a la
+                        pérdida, y la necesidad de <span class="bg-gray-200 text-gray-900 px-1 py-1 rounded">
+                          Enfrentarse a su dolor."
+                        </span>
+                    </p>
+
+                  </div>
+              </div>
+
+              <!-- Historia el laberinto-->
+            <div class="mt-10 lg:mt-32">
+              <div class="relative grid grid-cols-12 gap-8">
+                  <figure class="col-span-6 self-start relative overflow-hidden">
+                      <!-- Aquí va el contenido de la imagen o medios -->
+                       <div class="fade-out">
+                          <img src="./images/laberinto.jpg" alt="Descripción de la imagen" class="w-auto h-auto"/>
+                        </div>
+                  </figure>
+                  
+                  <div class="col-span-6 flex flex-col items-start justify-center">
+                      <!-- Aquí va el contenido del encabezado -->
+                      <h1 class="text-slate-100 text-2xl lg:text-6xl lg:ml-32">EL LABERINTO</h1>
+                      <p class="col-span-4 text-slate-500 mt-2 lg:text-3xl lg:ml-32">
+                        MEMORIA PERDIDA
+                      </p>
+                  </div>
+          
+                  <div class="col-span-10 col-start-2 row-start-2 lg:mt-5 text-pretty text-white">
+                      <p>
+                          "Este laberinto simboliza la confusión y recuerdos fragmentados de Brenda sobre el accidente y la pérdida de su padre. <span class="bg-gray-200 text-gray-900 px-1 py-1 rounded">“El lugar es oscuro,”</span> con paredes cubiertas de musgo y lianas que distorsionan los caminos y esconden las salidas. A medida que avanza, los caminos se transforman en versiones cambiantes de su infancia, reflejando su temor de no poder diferenciar la realidad de la ficción. Los giros equivocados la enfrentan a recuerdos dolorosos, como su padre desapareciendo o sus gritos de niña perdida. Este escenario representa su lucha interna por aceptar la verdad de sus recuerdos y reconciliarse con su pasado sin perderse en la desesperación. La única salida es aceptar su memoria y no intentar cambiarla."
+                      </p>  
+                  </div>
+              </div>
+          </div>
+
+          <!-- Historia la mazmorra-->
+          <div class="mt-10 lg:mt-32">
+            <div class="relative grid grid-cols-12 gap-8">
+                <div class="col-span-6 flex flex-col items-start justify-center pl-8 lg:pl-0">
+                    <!-- Aquí va el contenido del encabezado -->
+                    <h1 class="text-slate-100 text-2xl lg:text-6xl lg:ml-32">LA MAZMORRA</h1>
+                    <p class="col-span-4 text-slate-500 mt-2 lg:text-3xl lg:ml-32">
+                      EL MIEDO Y LA CULPA
+                    </p>
+                </div>
+
+                <figure class="col-span-6 self-start relative overflow-hidden">
+                    <!-- Aquí va el contenido de la imagen o medios -->
+                     <div class="fade-out">
+                        <img src="./images/masmorra.webp" alt="Descripción de la imagen" class="w-auto h-28 lg:h-auto pr-5"/>
+                     </div>
+                </figure>
+
+                <div class="col-span-10 col-start-2 row-start-2 lg:col-span-12 lg:col-start-1 lg:row-start-2 lg:mt-5 text-white">
+                    <p class="text-pretty">
+                        "La mazmorra es un lugar opresivo,
+                        construido de piedra oscura y barro, usado para apisionar y reprimir sus
+                        sentimientos en un desesperado intento por continuar con su vida después
+                        de la muerte de su padre. En este lugar, Brenda enfrenta visiones de sí
+                        misma atrapada, en distintos estados de <span class="bg-gray-200 text-gray-900 px-1 py-1 rounded">
+                        miedo y desesperación.
+                        </span> La mazmorra simboliza los sentimientos de culpa que ella alberga por haber
+                        sobrevivido cuando su padre no pudo. Es un espacio donde el eco de sus
+                        pensamientos más oscuros la confronta."
+                        
+                    </p>
+                </div>
+              </div>
+
+
+    </div>
+  </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
