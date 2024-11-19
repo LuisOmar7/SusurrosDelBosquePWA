@@ -1,6 +1,6 @@
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
+    caches.open('v2').then((cache) => {
       return cache.addAll([
         '/',
         '/index.html',
@@ -37,7 +37,7 @@ self.addEventListener('fetch', (event) => {
           // Clona la respuesta antes de almacenarla en caché
           let responseToCache = networkResponse.clone();
 
-          caches.open('v1').then((cache) => {
+          caches.open('v2').then((cache) => {
             cache.put(event.request, responseToCache).catch((error) => {
               console.error('Error al almacenar la respuesta en caché:', error);
             });
