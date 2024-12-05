@@ -10,13 +10,13 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "./src/images/icon-128.png",
+      "src": "./images/icon-128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./src/images/icon-512.png",
+      "src": "./images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
