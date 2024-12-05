@@ -17,7 +17,16 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       try {
-        return await cache.addAll(FILES_TO_CACHE);
+        // Verificar que cada archivo en FILES_TO_CACHE sea accesible
+        const cachePromises = FILES_TO_CACHE.map(async (url) => {
+          const request = new Request(url, { mode: 'no-cors' });
+          const response = await fetch(request);
+          if (!response.ok) {
+            throw new Error(`Request for ${url} failed with status ${response.status}`);
+          }
+          return cache.put(url, response);
+        });
+        return await Promise.all(cachePromises);
       } catch (error) {
         console.error('Error al agregar recursos al caché:', error);
       }
