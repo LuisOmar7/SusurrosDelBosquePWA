@@ -1,17 +1,19 @@
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v2').then((cache) => {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/src/css/style.css',
-        '/src/app.js',
-        '/src/manifest.json',
-        '/src/images/icon-128.png',
-        '/src/images/icon-512.png'
-      ]).catch((error) => {
+    caches.open('v2').then(async (cache) => {
+      try {
+        return await cache.addAll([
+          '/',
+          '/index.html',
+          '/src/css/style.css',
+          '/src/app.js',
+          '/src/manifest.json',
+          '/src/images/icon-128.png',
+          '/src/images/icon-512.png'
+        ]);
+      } catch (error) {
         console.error('Error al agregar recursos al caché:', error);
-      });
+      }
     })
   );
 });
@@ -45,17 +47,16 @@ self.addEventListener('fetch', (event) => {
 
           return networkResponse;
         });
-      }).catch((error) => {
+      }).catch(async (error) => {
         console.error('Error al manejar la solicitud:', error);
         // Devolver una página de reserva en caso de error
-        return caches.match('/offline.html').then((offlineResponse) => {
-          if (offlineResponse) {
-            return offlineResponse;
-          }
-          return new Response('Página no disponible sin conexión y no se encuentra un recurso de reserva.', {
-            status: 503,
-            statusText: 'Service Unavailable'
-          });
+        const offlineResponse = await caches.match('/offline.html');
+        if (offlineResponse) {
+          return offlineResponse;
+        }
+        return new Response('Página no disponible sin conexión y no se encuentra un recurso de reserva.', {
+          status: 503,
+          statusText: 'Service Unavailable'
         });
       })
   );
