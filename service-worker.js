@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v4';
+const CACHE_NAME = 'v5';
 const API_URL = 'https://utm210012ti-default-rtdb.firebaseio.com/.json';
 
 // Archivos que se agregarán al caché
