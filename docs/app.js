@@ -1,12 +1,13 @@
- if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/docs/service-worker.js')
-   .then(function(registration) {
-     console.log('Service Worker registrado con éxito:', registration);
-  })
-  .catch(function(error) {
-    console.log('Error al registrar el Service Worker:', error);
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/docs/service-worker.js').then(registration => {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, error => {
+      console.log('ServiceWorker registration failed: ', error);
+    });
   });
- }
+}
+
 
 // IDs de los elementos de los modales
 const modalIds = [1, 2, 3, 4];
