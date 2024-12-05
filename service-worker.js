@@ -5,12 +5,12 @@ const API_URL = 'https://utm210012ti-default-rtdb.firebaseio.com/.json';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
-  '/src/css/style.css',
-  '/src/app.js',
-  '/src/manifest.json',
-  '/src/images/brendaZ.jpeg',
-  '/src/images/wendigo.jpeg',
-  '/src/images/merodeador.jpeg',
+  '/docs/css/style.css',
+  '/docs/app.js',
+  '/docs/manifest.json',
+  '/docs/images/brendaZ.jpeg',
+  '/docs/images/wendigo.jpeg',
+  '/docs/images/merodeador.jpeg',
 ];
 
 self.addEventListener('install', (event) => {
