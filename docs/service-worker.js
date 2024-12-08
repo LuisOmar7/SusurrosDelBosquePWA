@@ -1,9 +1,8 @@
-const CACHE_NAME = 'v9';
+const CACHE_NAME = '10';
 const API_URL = 'https://utm210012ti-default-rtdb.firebaseio.com/.json';
 
 // Archivos que se agregarán al caché
 const FILES_TO_CACHE = [
-  '/',
   '/docs/index.html',
   '/docs/css/style.css',
   '/docs/app.js',
@@ -12,22 +11,23 @@ const FILES_TO_CACHE = [
   '/docs/images/wendigo.jpeg',
   '/docs/images/merodeador.jpeg',
   '/docs/images/cosechador.jpeg',
+  '/docs/images/logo-128.png',
+  '/docs/images/logo-512.png',
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       try {
-        // Verificar que cada archivo en FILES_TO_CACHE sea accesible
         const cachePromises = FILES_TO_CACHE.map(async (url) => {
           const request = new Request(url, { mode: 'no-cors' });
           const response = await fetch(request);
           if (!response.ok) {
             throw new Error(`Request for ${url} failed with status ${response.status}`);
           }
-          return cache.put(url, response);
+          await cache.put(url, response);
         });
-        return await Promise.all(cachePromises);
+        await Promise.all(cachePromises);
       } catch (error) {
         console.error('Error al agregar recursos al caché:', error);
       }
