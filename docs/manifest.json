@@ -1,7 +1,7 @@
 {
-  "name": "Susurros del bosque",
-  "short_name": "Page PWA",
-  "description": "Aplicación PWA",
+  "name": "Susurros Del Bosque",
+  "short_name": "SDB",
+  "description": "Aplicación Susurros Del Bosque PWA",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
