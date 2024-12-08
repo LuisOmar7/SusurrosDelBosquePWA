@@ -11,6 +11,9 @@ const FILES_TO_CACHE = [
   '/docs/images/brendaZ.jpeg',
   '/docs/images/wendigo.jpeg',
   '/docs/images/merodeador.jpeg',
+  '/docs/images/cosechador.jpeg',
+  '/docs/images/logo-128.png',
+  '/docs/images/logo-512.png',
 ];
 
 self.addEventListener('install', (event) => {
