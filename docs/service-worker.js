@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v8';
+const CACHE_NAME = 'v9';
 const API_URL = 'https://utm210012ti-default-rtdb.firebaseio.com/.json';
 
 // Archivos que se agregarán al caché
@@ -12,8 +12,6 @@ const FILES_TO_CACHE = [
   '/docs/images/wendigo.jpeg',
   '/docs/images/merodeador.jpeg',
   '/docs/images/cosechador.jpeg',
-  '/docs/images/logo-128.png',
-  '/docs/images/logo-512.png',
 ];
 
 self.addEventListener('install', (event) => {
