@@ -19,6 +19,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       try {
+        // Verificar que cada archivo en FILES_TO_CACHE sea accesible
         const cachePromises = FILES_TO_CACHE.map(async (url) => {
           const request = new Request(url, { mode: 'no-cors' });
           const response = await fetch(request);
